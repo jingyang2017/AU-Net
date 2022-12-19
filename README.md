@@ -9,8 +9,7 @@
 - Python 3
 - PyTorch
 
-Data and Data Prepareing Tools
-=
+### Data and Data Prepareing Tools
 We use [RetinaFace](https://github.com/deepinsight/insightface) to do face detection:
   * [BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html)
   * [DISFA](http://mohammadmahoor.com/disfa-contact-form/)

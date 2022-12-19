@@ -18,7 +18,6 @@ We use [RetinaFace](https://github.com/deepinsight/insightface) to do face detec
 
 
 ### Training and Testing
-=
 - train the VAE module on BP4D split 1, run:
 ```
 python train_vae.py --data BP4D --subset 1 --weight 0.3 

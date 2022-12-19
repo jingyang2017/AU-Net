@@ -6,7 +6,6 @@
 >a simple yet strong baseline for facial AU detection.
 
 ### Requirements
-=
 - Python 3
 - PyTorch
 

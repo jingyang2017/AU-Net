@@ -148,6 +148,7 @@ class data_load(data.Dataset):
         self.transform = transform
         self.interv = 10
         self.data = data
+
         if data=='bp4d':
             predix_path = '/data/home/jinang/cluster/Datasets/BP4D/'  # annotation path
             self.predix_path = predix_path + '/BP4D-small/'  # image path
@@ -171,6 +172,7 @@ class data_load(data.Dataset):
                     self.label_list.append(label_list_all[index])
             end_t = time.time()
             print('take time', end_t - start_t, '%d/%d' % (len(self.label_list), len(paths)))
+        
         elif data=='disfa':
             predix_path = '/data/home/jinang/cluster/Datasets/DISFA/'
             self.predix_path = predix_path+'/DISFA_frames/'
@@ -185,7 +187,7 @@ class data_load(data.Dataset):
                     print('train on disfa', i)
                     paths.extend(open('data/DISFA/splits/DISFA_part%d_path.txt' % i).readlines())
             else:
-                print('test on difa', subset)
+                # print('test on disfa', subset)
                 paths = open('data/DISFA/splits/DISFA_part%d_path.txt' % subset).readlines()
 
             self.img_list = []
@@ -224,9 +226,6 @@ class data_load(data.Dataset):
         au = self.label_list[index]
         img_name = self.predix_path + name
 
-
-
-
         self.interv1 = self.interv
         self.interv2 = self.interv
 
@@ -258,6 +257,8 @@ class data_load(data.Dataset):
             cur_index = int(float(cur_name.replace('.jpg', '')))
             former_name = '%08d.jpg'%(cur_index-self.interv1)
             later_name = '%08d.jpg'%(cur_index+self.interv2)
+        else:
+            raise NotImplementedError()
 
         former_img_name = name.replace(cur_name, former_name)
         later_img_name = name.replace(cur_name, later_name)

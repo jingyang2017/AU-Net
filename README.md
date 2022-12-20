@@ -1,9 +1,13 @@
 ## Towards robust facial action units detection
+### Overview of AU-Net
+>A simple yet strong baseline for facial AU detection:
+   * Extract basic AU features from a pretrained face alignment model
+   * Instantiate [TDN](https://github.com/MCG-NJU/TDN) to model temporal dynamics on static AU features
+   * Use VAE module to regulate the initial prediction
 <p align="center">
-<img src="overview.png" width="70%" />
+<img src="overview.png" width="80%" />
 </p>
 
->a simple yet strong baseline for facial AU detection.
 
 ### Requirements
 - Python 3
@@ -43,7 +47,6 @@ python train_video_vae.py --data BP4D --vae 'pretrained vae model'
 
 
 ### Acknowledgements
-
 This repo is built using components from [JAANet](https://github.com/ZhiwenShao/PyTorch-JAANet) and [EmoNet](https://github.com/face-analysis/emonet)
 
 ### License

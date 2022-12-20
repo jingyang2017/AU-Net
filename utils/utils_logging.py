@@ -27,10 +27,10 @@ class AverageMeter(object):
         self.avg = self.sum / self.count
 
 
-def init_logging(log_root, models_root):
+def init_logging(log_root, models_root,filename="training.log"):
     log_root.setLevel(logging.INFO)
     formatter = logging.Formatter("Training: %(asctime)s-%(message)s")
-    handler_file = logging.FileHandler(os.path.join(models_root, "training.log"))
+    handler_file = logging.FileHandler(os.path.join(models_root, filename))
     handler_stream = logging.StreamHandler(sys.stdout)
     handler_file.setFormatter(formatter)
     handler_stream.setFormatter(formatter)

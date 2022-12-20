@@ -1,12 +1,11 @@
 import argparse
-
 import torch
 from data.data_load import data_load
 from models.aunet import AU_NET
 from torchvision import transforms
 from utils.evaluation import evaluate_multi
 from utils.metrics import get_acc, get_f1
-
+import logging
 torch.backends.cudnn.benchmark = True
 
 parser = argparse.ArgumentParser(description='model evaluation')
@@ -42,6 +41,9 @@ test_loader_1 = torch.utils.data.DataLoader(val_data, batch_size=64, shuffle=Fal
 val_data = data_load(args.data, phase='test', subset=args.subset,  flip=True,transform=transform_valid,seed=0)
 test_loader_2 = torch.utils.data.DataLoader(val_data, batch_size=64, shuffle=False, num_workers=8, pin_memory=True)
 output = evaluate_multi(model, test_loader_1, test_loader_2, metrics={'ACC': get_acc, 'F1': get_f1})
-print('f1 score: ', str(output['F1'].numpy().tolist()))
-print('average f1 score: ', str(output['F1'].mean().numpy().tolist()))
+
+# print('f1 score: ', str(output['F1'].numpy().tolist()))
+# print('average f1 score: ', str(output['F1'].mean().numpy().tolist()))
+
+
 

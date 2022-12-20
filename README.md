@@ -40,7 +40,7 @@ python train_video_vae.py --data BP4D --vae 'pretrained vae model'
 
 |DISFA| Average F1-score(%)|
 | :---: |  :---: |
-|disfa_split*|65.4|
+|disfa_split*|66.1|
 
 - Demo to predict 15 AUs [Demo](demo.ipynb)
 

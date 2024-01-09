@@ -1,5 +1,6 @@
-## Towards robust facial action units detection{https://github.com/jingyang2017/AU-Net/blob/main/Towards%20Robust%20Facial%20Action%20Units%20Detection.pdf}
+## Towards robust facial action units detection 
 ### Overview of AU-Net
+[Paper]{{https://github.com/jingyang2017/AU-Net/blob/main/Towards%20Robust%20Facial%20Action%20Units%20Detection.pdf}}
 >A simple yet strong baseline for facial AU detection:
    * Extract basic AU features from a pretrained face alignment model
    * Instantiate [TDN](https://github.com/MCG-NJU/TDN) to model temporal dynamics on static AU features

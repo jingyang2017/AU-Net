@@ -44,7 +44,16 @@ python train_video_vae.py --data BP4D --vae 'pretrained vae model'
 
 - Demo to predict 15 AUs [Demo](demo.ipynb)
 
-
+## Citation
+```
+@article{yang2023toward,
+  title={Toward Robust Facial Action Units’ Detection},
+  author={Yang, Jing and Hristov, Yordan and Shen, Jie and Lin, Yiming and Pantic, Maja},
+  journal={Proceedings of the IEEE},
+  year={2023},
+  publisher={IEEE}
+}
+```
 
 ### Acknowledgements
 This repo is built using components from [JAANet](https://github.com/ZhiwenShao/PyTorch-JAANet) and [EmoNet](https://github.com/face-analysis/emonet)
